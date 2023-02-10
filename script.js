@@ -101,7 +101,7 @@ function deleteBookmark(id) {
 
 function storeBookmark(e) {
 	e.preventDefault();
-	const nameValue = websiteNameEl.value;
+	const nameValue = websiteNameEl.value.toLowerCase();
 	let urlValue = websiteUrlEl.value;
 	if (!urlValue.includes('http://') && !urlValue.includes('https://')) {
 		urlValue = `https://${urlValue}`;
